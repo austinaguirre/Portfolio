@@ -113,14 +113,19 @@ body {
 
 .contact-section {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     margin-left: 90px;
     gap: 20px;
     padding: 0px;
     background: transparent;
     margin-bottom: 90px;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
 }
 
-.contact-section a {
+.contact-section a , .contact-section button{
     text-decoration: none;
     color: var(--text-color);
     font-size: 15px;
@@ -138,6 +143,9 @@ body {
     border: none;
     cursor: pointer;
     color: var(--text-color);
+    width: auto;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 
@@ -174,13 +182,42 @@ body {
 
     .contact-section {
         order: 2;
-        width: calc(100% - 2%);
-        margin-left: 2%;
+        width: calc(100% - 15%);
         margin-top: 0px;
         margin-bottom: 0px;
+        margin-left: 15px;
     }
 
     .App {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        margin-left: 15px; 
+        align-items: center;
+    }
+    .contact-section a, .contact-section button {
+        min-width: 0; 
+        width: 100%;
+    }
+
+
+    .contact-section a {
+        min-width: 0; 
+        width: 100%; 
+        margin-right: 0;
+    }
+
+    .contact-section button {
+        grid-column: auto / span 1; 
+        margin-right: 0; 
+        padding-right: 0;  
+        flex: none; 
+        width: auto;
+        display: block;
     }
 }
