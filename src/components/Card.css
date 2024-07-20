@@ -1,0 +1,167 @@
+/* Card.css */
+@import "../varibles.css";
+
+.card {
+    /* background-color: var(--background-color); */
+    background: transparent;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease;
+}
+.card.dimmed{
+    opacity: 0.3;
+}
+.card:hover{
+    opacity: 1 !important;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card-content {
+    color: var(--text-color);
+}
+
+.about-card {
+    font-size: 130%;
+    color: var(--subtext-color);
+}
+
+/* .experience-card {
+    background-color: #e9e9ff;
+} */
+
+.project-card {
+    background-color: #9ce89c;
+}
+
+
+.content-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 110%;
+}
+
+.card-flex {
+    display: flex;
+    align-items: flex-start;
+}
+
+.card-date {
+    flex: 0 0 150px;
+    padding-right: 20px;
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--subtext-color);
+    font-size: 110%;
+}
+
+.card-main-content {
+    flex: 1; 
+    color: var(--subtext-color);
+}
+
+.card-main-content .p {
+    color: var(--subtext-color);
+}
+
+.card-title {
+    font-size: 1.2em;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.card-tags {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--text-color);
+}
+
+/* .card-tag-text{
+} */
+
+.card-tags li {
+    background-color: rgba(var(--primary-color-rgb), 0.8);
+    padding: 8px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    color: var(--special-text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 1024px){
+
+    .card {
+        /* background-color: var(--background-color); */
+        background: transparent;
+        padding: 0px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        /* transition: opacity 0.3s ease; */
+    }
+
+    .content-card{
+        margin-top: 0px;
+    }
+
+    .card.dimmed{
+        opacity: 1;
+    }
+    .card:hover{
+        opacity: 1;
+    }
+
+    .card-date {
+        padding-top: 26px;
+    }
+}
+
+@media (max-width: 640px) {
+    /* .sidebar{
+        padding-left: 5px !important;
+    } */
+    .card-flex {
+        flex-direction: column;
+    }
+    .about-card{
+        padding-bottom: 10px;
+    }
+    .card-date {
+        flex: 0 0 auto;
+        padding-right: 0;
+        width: 100%;
+        order: 1;
+    }
+    .card-title{
+        margin: 0px;
+    }
+
+    .card-main-content {
+        order: 2;
+        width: 100%;
+    }
+
+    .card-tags {
+        align-items: center;
+    }
+
+    .card-date {
+        padding-top: 0px;
+        justify-content: left;
+        padding-bottom: 10px;
+    }
+}
+

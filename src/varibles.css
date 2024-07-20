@@ -1,0 +1,19 @@
+/* variables.css */
+:root {
+    --background-color: #0a0a00;
+    --primary-color-rgb: 79, 30, 135;
+    --primary-color: #4f1e87;
+    --text-color: #ffffffc8;
+    --subtext-color: #c0c0c094;
+    --specialtext-color: #ffffff;
+
+
+    
+    --secondary-color: #6c757d;
+    --accent-color: #17a2b8;
+
+    --info-color: #117a8b;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+}
